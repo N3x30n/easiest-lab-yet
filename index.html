@@ -13,8 +13,13 @@
     <ul id="people" class=""></ul>
 
     <button id="button">GET Friends List</button>
+    <br>
+    <input type="textbox" id="input">
+    <button id="submit">Submit Input</button>
+  
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="indexes.js"></script>
     <script>
       document.getElementById("button").onclick = function () {
         axios
@@ -32,6 +37,18 @@
               '<li class="text-danger">' + err.message + "</li>";
           });
       };
+      // document.getElementById('submit').onclick = function () {
+      //   axios
+      //     .get('http://localhost:4000/api/submit')
+      //     .then(function (input) {
+      //       let words = response.data
+      //       document.getElementById('input').innerHTML = input
+      //         .map(function (input) {
+      //           return '<li class="input">' + input
+      //         })
+      //         .join("");
+      //     })
+      // }
     </script>
   </body>
 </html>

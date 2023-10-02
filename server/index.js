@@ -21,4 +21,11 @@ app.get('/weather/:temperature', (req,res) => {
 //     res.status(200).send(phrase);
 //   });
 
+let inputs = [];
+
+app.get('/api/submit', (req,res) => {
+    inputs.push(req.query.input)
+    res.status(200).send(inputs)
+})
+
 app.listen(4000, () => console.log('Server is running on prt 4000 :P'))
